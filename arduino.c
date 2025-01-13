@@ -29,9 +29,6 @@ delay(5000);
 Lcd.clear();
 Lcd.print(&quot;-*-SMART BAG-*-&quot;);
 digitalWrite(rel,HIGH);
-
-41
-
 }
 
 void loop()
@@ -66,9 +63,6 @@ Lcd.setCursor(0,4);
 Lcd.print(&quot;SEN&quot;);
 
 }
-
-42
-
 if(b==0)
 {
 Lcd.clear();
@@ -99,8 +93,6 @@ if((pass1.charAt(8)==&#39;C&#39;)&amp;&amp;(pass1.charAt(9)==&#39;B&#39;)&amp;&a
 Lcd.setCursor(12,11);
 Lcd.print(&quot; &quot;);
 }
-
-43
 
 if((pass1.charAt(8)==&#39;0&#39;)&amp;&amp;(pass1.charAt(9)==&#39;2&#39;)&amp;&amp;(pass1.charAt(10)==&#39;E&#39;
 )&amp;&amp;(pass1.charAt(11)==&#39;E&#39;))
@@ -170,9 +162,6 @@ delay(1500);
 String location()
 {
 bool newData = false;
-
-45
-
 unsigned long chars;
 unsigned short sentences, failed;
 // For one second we parse GPS data and report some key values
@@ -206,7 +195,7 @@ gps.satellites());
 
 Serial.print(&quot; PREC=&quot;);
 
-46
+
 
 Serial.print(gps.hdop() == TinyGPS::GPS_INVALID_HDOP ? 0 : gps.hdop());*/
 String lat = String(flat == TinyGPS::GPS_INVALID_F_ANGLE ? 0.0 : flat, 6);
